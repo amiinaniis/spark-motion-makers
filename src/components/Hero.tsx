@@ -1,27 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Waves } from "@/components/ui/waves-background";
 import { Play, ArrowRight, Film, Edit3, Zap } from "lucide-react";
-import heroImage from "@/assets/hero-video-editing.jpg";
 
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background with overlay */}
       <div className="absolute inset-0 hero-gradient" />
-      <div 
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      />
       <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background/80" />
       
       {/* Interactive Waves Background */}
       <Waves 
-        lineColor="hsl(var(--primary) / 0.4)"
+        lineColor="hsl(180 100% 50% / 0.6)"
         backgroundColor="transparent"
         waveSpeedX={0.015}
         waveSpeedY={0.008}
