@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Waves } from "@/components/ui/waves-background";
 import { Play, ArrowRight, Film, Edit3, Zap } from "lucide-react";
 import heroImage from "@/assets/hero-video-editing.jpg";
 
@@ -17,6 +18,22 @@ const Hero = () => {
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background/80" />
+      
+      {/* Interactive Waves Background */}
+      <Waves 
+        lineColor="hsl(var(--primary) / 0.4)"
+        backgroundColor="transparent"
+        waveSpeedX={0.015}
+        waveSpeedY={0.008}
+        waveAmpX={25}
+        waveAmpY={15}
+        friction={0.92}
+        tension={0.008}
+        maxCursorMove={80}
+        xGap={15}
+        yGap={40}
+        className="opacity-60"
+      />
 
       {/* Floating elements */}
       <div className="absolute top-20 left-10 w-16 h-16 bg-primary/20 rounded-full blur-xl animate-glow-pulse" />

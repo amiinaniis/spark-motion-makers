@@ -92,6 +92,10 @@ export default {
 				'gradient-shift': {
 					'0%, 100%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' }
+				},
+				'wave-pulse': {
+					'0%, 100%': { opacity: '0.4' },
+					'50%': { opacity: '0.7' }
 				}
 			},
 			animation: {
@@ -100,7 +104,8 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'scale-in': 'scale-in 0.3s ease-out',
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
-				'gradient-shift': 'gradient-shift 3s ease-in-out infinite'
+				'gradient-shift': 'gradient-shift 3s ease-in-out infinite',
+				'wave-pulse': 'wave-pulse 4s ease-in-out infinite'
 			}
 		}
 	},
