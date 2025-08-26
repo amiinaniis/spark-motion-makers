@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Waves } from "@/components/ui/waves-background";
-import { GlowEffect } from "@/components/ui/glow-effect";
+import { HandWrittenTitle } from "@/components/ui/hand-writing-text";
 import { Play, ArrowRight, Film, Edit3, Zap } from "lucide-react";
 
 const Hero = () => {
@@ -53,36 +53,13 @@ const Hero = () => {
             We specialize in professional video editing, motion graphics, and post-production services that bring your vision to life. From YouTube content to corporate videos, we make every frame count.
           </p>
 
-          {/* Glow Effect Box */}
-          <div className="relative w-[1920px] h-[1080px] max-w-full mx-auto mb-12 rounded-lg overflow-hidden">
-            <GlowEffect
-              colors={['hsl(var(--primary))', 'hsl(var(--accent))', 'hsl(var(--primary))', 'hsl(var(--accent))']}
-              mode="rotate"
-              blur="medium"
-              duration={8}
+          {/* Hand Written Title */}
+          <div className="animate-fade-in mb-12">
+            <HandWrittenTitle 
+              title="Trusted Excellence" 
+              subtitle="500+ Projects • 50+ Happy Clients • 24h Average Turnaround"
+              className="py-12"
             />
-            <div className="relative w-full h-full bg-background/90 backdrop-blur-sm border border-border rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <h2 className="text-3xl font-bold text-foreground mb-4">Premium Video Editing</h2>
-                <p className="text-muted-foreground">Experience the magic of professional video transformation</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-8 mb-12 animate-fade-in">
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-primary">500+</div>
-              <div className="text-sm text-muted-foreground">Projects Completed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-primary">50+</div>
-              <div className="text-sm text-muted-foreground">Happy Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-primary">24h</div>
-              <div className="text-sm text-muted-foreground">Average Turnaround</div>
-            </div>
           </div>
 
           {/* CTA Buttons */}
