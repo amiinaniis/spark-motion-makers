@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { RainbowBorderButton } from "@/components/ui/rainbow-borders-button";
 import { Menu, X, Play } from "lucide-react";
 
 const Navigation = () => {
@@ -40,9 +41,9 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <Button variant="hero" size="default">
+            <RainbowBorderButton>
               Get Quote
-            </Button>
+            </RainbowBorderButton>
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,9 +98,9 @@ const Navigation = () => {
               >
                 Contact
               </a>
-              <Button variant="hero" size="default" className="mt-4 w-full">
+              <RainbowBorderButton className="mt-4 w-full">
                 Get Quote
-              </Button>
+              </RainbowBorderButton>
             </div>
           </div>
         )}

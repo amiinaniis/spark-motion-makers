@@ -96,6 +96,11 @@ export default {
 				'wave-pulse': {
 					'0%, 100%': { opacity: '0.4' },
 					'50%': { opacity: '0.7' }
+				},
+				'rainbow': {
+					'0%': { backgroundPosition: '0 0' },
+					'50%': { backgroundPosition: '400% 0' },
+					'100%': { backgroundPosition: '0 0' }
 				}
 			},
 			animation: {
@@ -105,7 +110,8 @@ export default {
 				'scale-in': 'scale-in 0.3s ease-out',
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
 				'gradient-shift': 'gradient-shift 3s ease-in-out infinite',
-				'wave-pulse': 'wave-pulse 4s ease-in-out infinite'
+				'wave-pulse': 'wave-pulse 4s ease-in-out infinite',
+				'rainbow': 'rainbow 20s linear infinite'
 			}
 		}
 	},
