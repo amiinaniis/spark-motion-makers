@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Waves } from "@/components/ui/waves-background";
+import { BeamsBackground } from "@/components/ui/beams-background";
 import { Play, ArrowRight, Film, Edit3, Zap } from "lucide-react";
 
 const Hero = () => {
@@ -8,6 +9,9 @@ const Hero = () => {
       {/* Background with overlay */}
       <div className="absolute inset-0 hero-gradient" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background/80" />
+      
+      {/* Beam Background - Under wave lines */}
+      <BeamsBackground intensity="subtle" className="absolute inset-0" />
       
       {/* Interactive Waves Background */}
       <Waves 
@@ -52,19 +56,26 @@ const Hero = () => {
             We specialize in professional video editing, motion graphics, and post-production services that bring your vision to life. From YouTube content to corporate videos, we make every frame count.
           </p>
 
-          {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-8 mb-12 animate-fade-in">
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-primary">500+</div>
-              <div className="text-sm text-muted-foreground">Projects Completed</div>
+          {/* Trusted Excellence with Stats */}
+          <div className="mb-8 animate-fade-in">
+            <div className="text-center mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">Trusted Excellence</h2>
+              <p className="text-muted-foreground">Our proven track record speaks for itself</p>
             </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-primary">50+</div>
-              <div className="text-sm text-muted-foreground">Happy Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-primary">24h</div>
-              <div className="text-sm text-muted-foreground">Average Turnaround</div>
+            
+            <div className="flex flex-wrap justify-center gap-8">
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold text-primary">500+</div>
+                <div className="text-sm text-muted-foreground">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold text-primary">50+</div>
+                <div className="text-sm text-muted-foreground">Happy Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold text-primary">24h</div>
+                <div className="text-sm text-muted-foreground">Average Turnaround</div>
+              </div>
             </div>
           </div>
 

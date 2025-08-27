@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { GlowCard } from "@/components/ui/glow-card";
 import { 
   Film, 
   Scissors, 
@@ -18,42 +18,48 @@ const Services = () => {
       title: "Video Editing",
       description: "Professional video editing with seamless transitions, color correction, and audio synchronization.",
       features: ["Color Grading", "Audio Enhancement", "Seamless Transitions", "Format Optimization"],
-      price: "Starting at $299"
+      price: "Starting at $299",
+      glowColor: "blue" as const
     },
     {
       icon: Scissors,
       title: "Post-Production",
       description: "Complete post-production workflow from raw footage to final delivery across all platforms.",
       features: ["Multi-Camera Editing", "Visual Effects", "Audio Mixing", "Final Delivery"],
-      price: "Starting at $499"
+      price: "Starting at $499",
+      glowColor: "purple" as const
     },
     {
       icon: Palette,
       title: "Motion Graphics",
       description: "Eye-catching motion graphics, animations, and visual effects that enhance your storytelling.",
       features: ["2D/3D Animations", "Logo Animations", "Text Effects", "Custom Graphics"],
-      price: "Starting at $399"
+      price: "Starting at $399",
+      glowColor: "green" as const
     },
     {
       icon: Music,
       title: "Audio Production",
       description: "Professional audio editing, mixing, and mastering for crystal-clear sound quality.",
       features: ["Audio Cleanup", "Voice Enhancement", "Music Integration", "Sound Design"],
-      price: "Starting at $199"
+      price: "Starting at $199",
+      glowColor: "orange" as const
     },
     {
       icon: Monitor,
       title: "YouTube Optimization",
       description: "Specialized editing for YouTube content with engagement-focused techniques and thumbnails.",
       features: ["Engagement Editing", "Thumbnail Design", "SEO Optimization", "Analytics Setup"],
-      price: "Starting at $249"
+      price: "Starting at $249",
+      glowColor: "red" as const
     },
     {
       icon: Sparkles,
       title: "Premium Package",
       description: "Complete video production service from concept to final delivery with unlimited revisions.",
       features: ["Full Production", "Unlimited Revisions", "Priority Support", "Rush Delivery"],
-      price: "Starting at $999"
+      price: "Starting at $999",
+      glowColor: "purple" as const
     }
   ];
 
@@ -83,22 +89,25 @@ const Services = () => {
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card 
+              <GlowCard 
                 key={index} 
-                className="card-gradient border-border hover:border-primary/50 smooth-transition group hover:shadow-xl animate-fade-in"
+                glowColor={service.glowColor}
+                customSize={true}
+                className="w-full h-auto aspect-auto p-6 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardHeader className="pb-4">
-                  <div className="w-12 h-12 accent-gradient rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 smooth-transition">
+                <div className="space-y-4">
+                  <div className="w-12 h-12 accent-gradient rounded-lg flex items-center justify-center group-hover:scale-110 smooth-transition">
                     <IconComponent className="w-6 h-6 text-accent-foreground" />
                   </div>
-                  <CardTitle className="text-xl font-bold text-foreground">{service.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent className="space-y-4">
+                  
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
+                    <p className="text-muted-foreground text-sm">
+                      {service.description}
+                    </p>
+                  </div>
+                  
                   {/* Features */}
                   <div className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
@@ -110,7 +119,7 @@ const Services = () => {
                   </div>
 
                   {/* Price */}
-                  <div className="pt-4 border-t border-border">
+                  <div className="pt-4 border-t border-border/20">
                     <div className="flex items-center justify-between">
                       <span className="text-lg font-semibold text-primary">{service.price}</span>
                       <Button variant="outline" size="sm" className="group">
@@ -119,26 +128,32 @@ const Services = () => {
                       </Button>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </GlowCard>
             );
           })}
         </div>
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="card-gradient border border-border rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Need a Custom Solution?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Every project is unique. Let's discuss your specific requirements and create a tailored package that fits your needs and budget.
-            </p>
-            <Button variant="hero" size="lg" className="group">
-              Get Custom Quote
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 smooth-transition" />
-            </Button>
-          </div>
+          <GlowCard 
+            glowColor="blue"
+            customSize={true}
+            className="w-full max-w-2xl mx-auto p-8"
+          >
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Need a Custom Solution?
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Every project is unique. Let's discuss your specific requirements and create a tailored package that fits your needs and budget.
+              </p>
+              <Button variant="hero" size="lg" className="group">
+                Get Custom Quote
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 smooth-transition" />
+              </Button>
+            </div>
+          </GlowCard>
         </div>
       </div>
     </section>
