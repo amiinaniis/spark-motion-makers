@@ -10,7 +10,7 @@ export const RainbowBorderButton = ({ children, className, ...props }: RainbowBo
   return (
     <button 
       className={cn(
-        "rainbow-border relative w-[140px] h-10 flex items-center justify-center gap-2.5 px-4 bg-background rounded-xl border-none text-foreground cursor-pointer font-black transition-all duration-200 hover:scale-105",
+        "rainbow-border relative w-[140px] h-10 flex items-center justify-center gap-2.5 px-4 bg-background rounded-xl border-none text-foreground cursor-pointer font-semibold transition-all duration-200 hover:scale-105",
         className
       )}
       {...props}
