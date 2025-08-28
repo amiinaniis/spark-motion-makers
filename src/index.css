@@ -158,4 +158,19 @@
   .rainbow-border::after {
     filter: blur(50px);
   }
+
+  @keyframes rainbow {
+    0%, 100% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+  }
+
+  @keyframes border-beam {
+    100% {
+      offset-distance: 100%;
+    }
+  }
 }

@@ -1,6 +1,7 @@
 import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GlowEffect } from "@/components/ui/glow-effect";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 const VSL = () => {
   return (
@@ -25,6 +26,15 @@ const VSL = () => {
                 aspectRatio: '16/9' 
               }}
             >
+              {/* Border Beam Animation */}
+              <BorderBeam 
+                size={300}
+                duration={12}
+                borderWidth={2}
+                colorFrom="hsl(var(--primary))"
+                colorTo="hsl(var(--accent))"
+                delay={0}
+              />
               {/* Glow Effect Background */}
               <GlowEffect
                 colors={['hsl(var(--primary))', 'hsl(var(--accent))', 'hsl(var(--primary))']}

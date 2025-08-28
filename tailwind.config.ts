@@ -101,6 +101,9 @@ export default {
 					'0%': { backgroundPosition: '0 0' },
 					'50%': { backgroundPosition: '400% 0' },
 					'100%': { backgroundPosition: '0 0' }
+				},
+				'border-beam': {
+					'100%': { 'offset-distance': '100%' }
 				}
 			},
 			animation: {
@@ -111,7 +114,8 @@ export default {
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
 				'gradient-shift': 'gradient-shift 3s ease-in-out infinite',
 				'wave-pulse': 'wave-pulse 4s ease-in-out infinite',
-				'rainbow': 'rainbow 20s linear infinite'
+				'rainbow': 'rainbow 20s linear infinite',
+				'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear'
 			}
 		}
 	},
