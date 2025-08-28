@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { RainbowBorderButton } from "@/components/ui/rainbow-borders-button";
 import { Waves } from "@/components/ui/waves-background";
 import { BeamsBackground } from "@/components/ui/beams-background";
 import { Play, ArrowRight, Film, Edit3, Zap } from "lucide-react";
@@ -82,10 +81,10 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in">
-            <RainbowBorderButton className="w-[200px] group">
-              Get Custom Quote
+            <Button variant="hero" size="xl" className="group">
+              Start Your Project
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 smooth-transition" />
-            </RainbowBorderButton>
+            </Button>
             <Button variant="glass" size="xl" className="group">
               <Play className="w-5 h-5 group-hover:scale-110 smooth-transition" />
               Watch Our Work
