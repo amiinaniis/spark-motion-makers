@@ -6,7 +6,7 @@ import { Play, ArrowRight, Film, Edit3, Zap } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative pt-16">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background with overlay */}
       <div className="absolute inset-0 hero-gradient" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background/80" />

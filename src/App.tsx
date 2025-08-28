@@ -12,7 +12,7 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <BeamsBackground intensity="subtle" className="bg-neutral-950">
+      <BeamsBackground intensity="subtle" className="min-h-screen bg-neutral-950">
         <Toaster />
         <Sonner />
         <BrowserRouter>
