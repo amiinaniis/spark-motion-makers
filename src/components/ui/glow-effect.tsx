@@ -49,7 +49,9 @@ export function GlowEffect({
         `conic-gradient(from 0deg at 50% 50%, ${colors.join(', ')})`,
         `conic-gradient(from 360deg at 50% 50%, ${colors.join(', ')})`,
       ],
-      transition: transition ?? BASE_TRANSITION,
+      transition: {
+        ...(transition ?? BASE_TRANSITION),
+      },
     },
     pulse: {
       background: colors.map(
@@ -58,9 +60,11 @@ export function GlowEffect({
       ),
       scale: [1 * scale, 1.1 * scale, 1 * scale],
       opacity: [0.5, 0.8, 0.5],
-      transition: transition ?? {
-        ...BASE_TRANSITION,
-        repeatType: 'mirror' as const,
+      transition: {
+        ...(transition ?? {
+          ...BASE_TRANSITION,
+          repeatType: 'mirror' as const,
+        }),
       },
     },
     breathe: {
@@ -71,9 +75,11 @@ export function GlowEffect({
         ),
       ],
       scale: [1 * scale, 1.05 * scale, 1 * scale],
-      transition: transition ?? {
-        ...BASE_TRANSITION,
-        repeatType: 'mirror' as const,
+      transition: {
+        ...(transition ?? {
+          ...BASE_TRANSITION,
+          repeatType: 'mirror' as const,
+        }),
       },
     },
     colorShift: {
@@ -81,9 +87,11 @@ export function GlowEffect({
         const nextColor = colors[(index + 1) % colors.length];
         return `conic-gradient(from 0deg at 50% 50%, ${color} 0%, ${nextColor} 50%, ${color} 100%)`;
       }),
-      transition: transition ?? {
-        ...BASE_TRANSITION,
-        repeatType: 'mirror' as const,
+      transition: {
+        ...(transition ?? {
+          ...BASE_TRANSITION,
+          repeatType: 'mirror' as const,
+        }),
       },
     },
     flowHorizontal: {
@@ -91,9 +99,11 @@ export function GlowEffect({
         const nextColor = colors[(colors.indexOf(color) + 1) % colors.length];
         return `linear-gradient(to right, ${color}, ${nextColor})`;
       }),
-      transition: transition ?? {
-        ...BASE_TRANSITION,
-        repeatType: 'mirror' as const,
+      transition: {
+        ...(transition ?? {
+          ...BASE_TRANSITION,
+          repeatType: 'mirror' as const,
+        }),
       },
     },
     static: {
