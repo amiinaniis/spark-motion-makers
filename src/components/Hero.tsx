@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Waves } from "@/components/ui/waves-background";
 import { BeamsBackground } from "@/components/ui/beams-background";
+import { HandWrittenTitle } from "@/components/ui/hand-written-title";
 import { Play, ArrowRight, Film, Edit3, Zap } from "lucide-react";
 
 const Hero = () => {
@@ -42,14 +43,13 @@ const Hero = () => {
             <span className="text-sm text-muted-foreground">Professional Video Editing Agency</span>
           </div>
 
-          {/* Main headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in leading-tight">
-            Transform Your
-            <span className="block accent-gradient bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_200%]">
-              Video Content
-            </span>
-            Into Masterpieces
-          </h1>
+          {/* Main headline with HandWrittenTitle */}
+          <div className="-my-12">
+            <HandWrittenTitle 
+              title="Video Editing Mastery"
+              subtitle="Transform your raw footage into compelling stories that captivate audiences"
+            />
+          </div>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in">
